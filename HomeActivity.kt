@@ -1,49 +1,51 @@
-package com.example.zoomee
+package com.example.mad
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
-    private lateinit var textViewUserProfile: TextView
-    private lateinit var buttonStartMeeting: Button
-    private lateinit var buttonSignout: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // Initialize the views
-        textViewUserProfile = findViewById(R.id.textViewUserProfile)
-        buttonStartMeeting = findViewById(R.id.buttonStartMeeting)
-        buttonSignout = findViewById(R.id.buttonSignout)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+        // Set default selected item
+        bottomNavigationView.selectedItemId = R.id.navigation_meetings
 
-        // Retrieve user email passed from LoginActivity or SignupActivity
-        val userEmail = intent.getStringExtra("USER_EMAIL")
+        // Handle bottom navigation item clicks
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.navigation_meetings -> {
 
-        // Display user profile information
-        if (userEmail != null) {
-            textViewUserProfile.text = "Welcome, $userEmail!"
-        } else {
-            textViewUserProfile.text = "Welcome, User!"
+                }
+                R.id.navigation_chat -> {
+                    // Handle Team Chat tab click
+                }
+                R.id.navigation_mail -> {
+                    // Handle Mail tab click
+                }
+                R.id.navigation_calendar -> {
+                    // Handle Calendar tab click
+                }
+                R.id.navigation_more -> {
+                    // Handle More tab click
+                }
+            }
+            true
         }
 
-        // Set click listener for "Start a Meeting"
-        buttonStartMeeting.setOnClickListener {
-            Toast.makeText(this, "Starting a meeting...", Toast.LENGTH_SHORT).show()
-            // Add your logic to start a meeting here (e.g., opening a new activity)
-        }
-
-        // Set click listener for "Signout"
-        buttonSignout.setOnClickListener {
-            Toast.makeText(this, "Signing out...", Toast.LENGTH_SHORT).show()
-            // Signout logic (e.g., redirect to login screen)
-            val intent = Intent(this, LoginActivity::class.java)
+        // Set up the click listener for the "New Meeting" image
+        val newMeetingImageView = findViewById<ImageView>(R.id.imageViewNewMeeting)
+        newMeetingImageView.setOnClickListener {
+            // Start NewMeetingActivity when the image is clicked
+            val intent = Intent(this, NewMeetingActivity::class.java)
             startActivity(intent)
-            finish() // Close the HomeActivity
         }
     }
 }
