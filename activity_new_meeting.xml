@@ -1,0 +1,120 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Toolbar with Cancel and Start a Meeting -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Cancel Button -->
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textSize="15sp"
+            android:textColor="@color/blue"
+            android:layout_marginEnd="36dp" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start a Meeting"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="200dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Options Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/cancelButton"
+        android:layout_marginTop="16dp"
+        tools:ignore="NotSibling">
+
+        <!-- Video On/Off -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video On"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp" />
+
+            <Switch
+                android:id="@+id/switchVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="@color/green"
+                android:minWidth="64dp"
+            android:minHeight="48dp" /> <!-- Increased height for better touch target -->
+        </LinearLayout>
+
+        <!-- PMI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            tools:ignore="ExtraText">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use Personal Meeting ID (PMI)"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp" />
+
+            <Switch
+                android:id="@+id/switchPMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="64dp"
+                android:thumbTint="@color/green"
+                tools:ignore="TouchTargetSizeCheck" />
+                android:minHeight="48dp" /> <!-- Increased height for better touch target -->
+        </LinearLayout>
+
+        <!-- Meeting ID -->
+        <TextView
+            android:id="@+id/meetingId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meeting ID: 123-456-7890"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Start Meeting Button -->
+    <Button
+        android:id="@+id/startMeetingButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start a Meeting"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/blue"
+        android:textStyle="bold"
+        android:layout_below="@id/meetingId"
+        android:layout_marginTop="150dp"
+        tools:ignore="NotSibling" />
+</RelativeLayout>
