@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:background="@drawable/edittextsignin_background"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:background="@drawable/edittextsignin_background"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Sign-In Button -->
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:backgroundTint="#007AFF"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Other Sign-In Methods -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other Sign-In Methods"
+        android:layout_gravity="center"
+        android:paddingBottom="12dp" />
+
+    <Button
+        android:id="@+id/buttonGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with Google"
+        android:backgroundTint="#007AFF"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/buttonApple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with Apple"
+        android:backgroundTint="#007AFF"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/buttonFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with Facebook"
+        android:backgroundTint="#007AFF"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/buttonSSO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with SSO"
+        android:backgroundTint="#007AFF"
+        android:layout_marginBottom="8dp" />
+</LinearLayout>

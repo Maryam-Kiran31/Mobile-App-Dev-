@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#f0f0f0"
+    android:gravity="center">
+
+    <!-- Title: Create Account -->
+    <TextView
+        android:id="@+id/createAccountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center" />
+
+    <!-- Enter your name and password -->
+    <TextView
+        android:id="@+id/enterNameAndPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your name and set a password"
+        android:textSize="16sp"
+        android:textColor="#808080"
+        android:layout_marginBottom="20dp" />
+
+    <!-- First Name EditText -->
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@android:color/darker_gray"
+        android:hint="First Name"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#808080" />
+
+    <!-- Last Name EditText -->
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@android:color/darker_gray"
+        android:hint="Last Name"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#808080" />
+
+    <!-- Password EditText -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@android:color/darker_gray"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#808080" />
+
+    <!-- Password must include at least -->
+    <TextView
+        android:id="@+id/passwordCriteria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password must include at least:\n- 8 characters\n- 1 number\n- 1 lowercase\n- 1 uppercase letter"
+        android:textSize="14sp"
+        android:textColor="#808080"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Create Account Button -->
+    <Button
+        android:id="@+id/createAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textColor="#FFFFFF"
+        android:background="@color/blue"
+        android:enabled="false"
+        android:layout_marginBottom="20dp" />
+</LinearLayout>

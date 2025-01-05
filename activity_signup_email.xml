@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <!-- Signup Title -->
+    <TextView
+        android:id="@+id/signupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Email Input Field -->
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#B0B0B0"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signupTitle" />
+    <!-- Password EditText -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"/>
+
+    <!-- Continue Button -->
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#007AFF"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <!-- Privacy Statement Text -->
+    <TextView
+        android:id="@+id/privacyStatement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By proceeding, I agree to Zoom's Privacy Statement and Terms of Service"
+        android:textColor="#0061F2"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/continueButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Social Login Text -->
+    <TextView
+        android:id="@+id/socialLoginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or Select your signup method"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/privacyStatement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Google Signup Button -->
+    <Button
+        android:id="@+id/googleSignUpButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continue with Google"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#007AFF"
+        app:layout_constraintTop_toBottomOf="@id/socialLoginText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Apple Signup Button -->
+    <Button
+        android:id="@+id/appleSignUpButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continue with Apple"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#007AFF"
+        app:layout_constraintTop_toBottomOf="@id/googleSignUpButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Facebook Signup Button -->
+    <Button
+        android:id="@+id/facebookSignUpButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continue with Facebook"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#007AFF"
+        app:layout_constraintTop_toBottomOf="@id/appleSignUpButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
